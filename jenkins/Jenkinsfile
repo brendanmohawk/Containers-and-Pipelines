@@ -1,7 +1,7 @@
 
 node {
     // Load the greetingsPipeline.groovy script
-    def greetingsPipeline = load 'greetingsPipeline.groovy'
+    def greetingsPipeline = load 'jenkins/greetingsPipeline.groovy'
 
     // Call the greetingsPipeline function
     greetingsPipeline {
