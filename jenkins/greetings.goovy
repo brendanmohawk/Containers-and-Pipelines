@@ -1,6 +1,0 @@
-// greetings.groovy
-// Brendan Dileo Educational
-
-def call(Map params) {
-    echo "Hello ${params.name}, you are ${params.age} years old!"
-}
