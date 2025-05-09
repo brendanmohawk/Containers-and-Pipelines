@@ -1,5 +1,10 @@
-def greetingsPipeline = load 'greetingsPipeline.groovy'
 
-greetingsPipeline {
-    name = 'World'
+node {
+    // Load the greetingsPipeline.groovy script
+    def greetingsPipeline = load 'greetingsPipeline.groovy'
+
+    // Call the greetingsPipeline function
+    greetingsPipeline {
+        name = 'World' // Pass parameters to the pipeline
+    }
 }
