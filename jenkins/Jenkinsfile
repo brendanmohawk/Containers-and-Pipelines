@@ -1,6 +1,6 @@
 node {
   checkout scm
-  def varPipeline = load 'varPipeline.groovy'
+  def varPipeline = load 'jenkins/varPipeline.groovy'
 
   varPipeline.call {
     name = 'Brendan'
