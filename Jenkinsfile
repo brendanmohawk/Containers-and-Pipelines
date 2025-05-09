@@ -17,6 +17,7 @@ pipeline {
 
     stage('Build') {
       steps {
+        sh 'ls -la'                                                           // List directory contents
         sh 'mvn clean compile'                                                // Runs Maven to clean old build files and compile the Java code
       }
     }
