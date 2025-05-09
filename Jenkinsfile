@@ -25,8 +25,8 @@ pipeline {
 
     stage('Build') {
       steps {
-        dir('/var/jenkins_home/workspace/MavenPipeline') {  // Ensure the directory is correct
-            sh 'mvn clean compile'  // Run Maven build
+        dir('/var/jenkins_home/workspace/MavenPipeline') {  
+            sh 'mvn clean compile'                                                                              // Run Maven build
         }
       }
     }
@@ -34,9 +34,15 @@ pipeline {
     stage('Build 2') {
         steps {
             dir('/var/jenkins_home/workspace/MavenPipeline') {
-                sh 'mvn clean install'  // Try 'install' to also handle dependencies
+                sh 'mvn clean install' 
             }
         }
+    }
+
+    stage('Test Case') {
+      steps {
+        sh 'mvn test'                                                                                           // Run unit tests
+      }
     }
   }
 }
