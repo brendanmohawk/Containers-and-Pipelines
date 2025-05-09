@@ -9,23 +9,10 @@ pipeline {
         // git branch: 'main', url: 'https://github.com/brendanmohawk/Containers-and-Pipelines.git'    // Clone repo
       }
     }
-
-    stage('Clean') {
+    stage('Verify Workspace') {
       steps {
-        deleteDir()                                                            // Delete all files in current directory
-      }
-    }
-
-    stage('Build') {
-      steps {
-        sh 'ls -la'                                                           // List directory contents
-        sh 'mvn clean compile'                                                // Runs Maven to clean old build files and compile the Java code
-      }
-    }
-
-    stage('Test') {
-      steps {
-        sh 'mvn test'                                                          // Run Maven tests
+          sh 'pwd'  // Print the working directory
+          sh 'ls -la'  // List files in the workspace
       }
     }
   }
