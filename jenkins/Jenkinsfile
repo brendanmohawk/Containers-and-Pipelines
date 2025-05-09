@@ -1,3 +1,5 @@
+load 'jenkins/varPipeline.groovy'
+
 varPipeline {
   name = 'Brendan'
   age = '22'
