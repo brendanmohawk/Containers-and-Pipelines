@@ -1,0 +1,24 @@
+// Jenkinsfile
+pipeline {
+    agent any
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+        
+        stage('Load and Run Groovy Script') {
+            steps {
+                script {
+                    // Load an external Groovy script
+                    def myScript = load 'myGroovyScript.groovy'
+
+                    // Pass parameters to the script
+                    myScript(name: 'Brendan', age: 22)
+                }
+            }
+        }
+    }
+}
