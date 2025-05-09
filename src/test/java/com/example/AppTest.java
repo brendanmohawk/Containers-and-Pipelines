@@ -14,4 +14,11 @@ public class AppTest {
     assertEquals("Hello World!", app.getMessage());
     System.out.println("Test Passed: The message is correct!");
   }
+  
+  @Test
+  public void testMessageNotNull() {
+    App app = new App();
+    assertNotNull(app.getMessage(), "Message should not be null");
+    System.out.println("Test Passed: The message is not null!");
+    }
 }
