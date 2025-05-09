@@ -10,17 +10,5 @@ pipeline {
                  sh 'ls -alh'
             }
         }
-        
-        stage('Load and Run Groovy Script') {
-            steps {
-                script {
-                    // Load an external Groovy script
-                    def myScript = load 'jenkins/greetings.groovy'
-
-                    // Pass parameters to the script
-                    myScript(name: 'Brendan', age: 22)
-                }
-            }
-        }
     }
 }
