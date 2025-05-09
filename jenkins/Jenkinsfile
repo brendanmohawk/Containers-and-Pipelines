@@ -1,4 +1,5 @@
 node {
+  checkout scm
   def varPipeline = load 'varPipeline.groovy'
 
   varPipeline.call {
