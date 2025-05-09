@@ -10,5 +10,17 @@ pipeline {
                  sh 'ls -alh'
             }
         }
+
+         stage('Set Working Directory') {
+            steps {
+                script {
+                    // Change the working directory to /jenkins
+                    dir('/jenkins') {
+                        sh 'pwd' // Check the working directory
+                        sh 'ls -alh' // List files in the directory
+                    }
+                }
+            }
+        }
     }
 }
