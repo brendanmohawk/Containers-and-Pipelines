@@ -29,5 +29,14 @@ pipeline {
                 sh 'pwd' // Check the working directory
             }
          }
+
+        stage('Greeting') {
+            steps {
+                script {
+                    def greetings = load 'jenkins/greetings.groovy'
+                    greetings.call(name: 'Brendan', age: 22) 
+                }
+            }
+        }
     }
 }
