@@ -18,7 +18,9 @@ pipeline {
 
         stage('Build') {
             steps {
-                dir('/jenkins')
+                dir('/jenkins') {
+                    echo "Inside Jenkins Dir"
+                }
             }
         }
 
