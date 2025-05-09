@@ -7,13 +7,19 @@ def call(body) {
   body.delegate = pipelineParams
   body()
 
-  // ...
 
   // Define the Jenkins pipeline
   pipeline {
     agent any 
 
     stages {
+      stage('Greeting') {
+        steps {
+          script {
+            echo "Hello, ${pipelineParams.name}!"
+          }
+        }
+      }
     }
   }
 }
