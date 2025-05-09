@@ -5,6 +5,10 @@ node {
   def varPipeline = load 'jenkins/varPipeline.groovy'
   echo "varPipeline loaded: ${varPipeline}"
 
+   if (varPipeline == null) {
+        error "varPipeline is null!"
+    }
+
   varPipeline {
     name = 'Brendan'
     age = '22'
