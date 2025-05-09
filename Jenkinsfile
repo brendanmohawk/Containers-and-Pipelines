@@ -36,18 +36,9 @@ pipeline {
 
     stage('Build') {
       steps {
-        dir('/var/jenkins_home/workspace/MavenPipeline') {  
-            sh 'mvn clean install'                                                                               // Run Maven build
+        sh 'mvn clean install'                                                                                   // Run Maven build
         }
       }
-    }
-
-    stage('Build 2') {
-        steps {
-            dir('/var/jenkins_home/workspace/MavenPipeline') {
-                sh 'mvn clean install' 
-            }
-        }
     }
 
     stage('Test Case') {
@@ -59,16 +50,6 @@ pipeline {
     stage('Post Test') {
       steps {
         echo 'Test Case Completed Successfully!'
-      }
-    }
-
-    stage('Greet') {
-      steps {
-        script {
-          def name = 'Brendan'
-          def age = 22
-          echo "${name} is ${age} years old!"
-        }
       }
     }
   }
