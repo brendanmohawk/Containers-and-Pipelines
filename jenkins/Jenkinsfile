@@ -31,9 +31,11 @@ pipeline {
          }
 
         stage('Greeting') {
-            script {
-                dir('jenkins') {
-                    load 'greetings.groovy'
+            steps {
+                script {
+                    dir('jenkins') {
+                        load 'greetings.groovy'
+                    }
                 }
             }
         }
