@@ -12,5 +12,6 @@ public class AppTest {
   public void testMessage() {
     App app = new App();
     assertEquals("Hello World!", app.getMessage());
+    System.out.println("Test Passed: The message is correct!");
   }
 }
