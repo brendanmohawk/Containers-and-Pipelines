@@ -1,1 +1,4 @@
-
+varPipeline {
+  name = 'Brendan'
+  age = '22'
+}
