@@ -31,10 +31,9 @@ pipeline {
          }
 
         stage('Greeting') {
-            steps {
-                script {
-                    def greetings = load 'greetings.groovy'
-                    greetings.call(name: 'Brendan', age: 22) 
+            script {
+                dir('jenkins') {
+                    load 'greetings.groovy'
                 }
             }
         }
