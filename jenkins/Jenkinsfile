@@ -33,7 +33,7 @@ pipeline {
         stage('Greeting') {
             steps {
                 script {
-                    def greetings = load 'jenkins/greetings.groovy'
+                    def greetings = load 'greetings.groovy'
                     greetings.call(name: 'Brendan', age: 22) 
                 }
             }
