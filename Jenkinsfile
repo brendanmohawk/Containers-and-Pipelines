@@ -5,7 +5,8 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git branch: 'main', url: 'https://github.com/brendanmohawk/Containers-and-Pipelines.git'    // Clone repo
+        checkout scm
+        // git branch: 'main', url: 'https://github.com/brendanmohawk/Containers-and-Pipelines.git'    // Clone repo
       }
     }
 
