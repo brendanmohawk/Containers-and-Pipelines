@@ -44,5 +44,11 @@ pipeline {
         sh 'mvn test'                                                                                           // Run unit tests
       }
     }
+
+    stage('Post Test') {
+      steps {
+        echo 'Test Case Completed Successfully!'
+      }
+    }
   }
 }
