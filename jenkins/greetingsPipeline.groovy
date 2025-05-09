@@ -1,6 +1,8 @@
 // greetings.groovy
 // Brendan Dileo Educational
 
+// TODO: Need to setup Global Trusted Pipeline Libraries / Shared Libraries
+
 def call(body) {
   def pipelineParams = [:]
   body.resolveStrategy = Closure.DELEGATE_FIRST
