@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     // Load an external Groovy script
-                    def myScript = load 'greetings.groovy'
+                    def myScript = load 'jenkins/greetings.groovy'
 
                     // Pass parameters to the script
                     myScript(name: 'Brendan', age: 22)
