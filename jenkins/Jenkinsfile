@@ -1,8 +1,9 @@
-load 'jenkins/varPipeline.groovy'
-
 node {
-  varPipeline {
+  def varPipeline = load 'jenkins/varPipeline.groovy'
+
+  varPipeline.call {
     name = 'Brendan'
     age = '22'
   }
 }
+
