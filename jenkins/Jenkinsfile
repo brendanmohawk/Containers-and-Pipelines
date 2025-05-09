@@ -1,3 +1,5 @@
+def greetingsPipeline = load 'greetingsPipeline.groovy'
+
 greetingsPipeline {
     name = 'World'
 }
