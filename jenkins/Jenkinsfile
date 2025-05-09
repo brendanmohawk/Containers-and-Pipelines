@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     // Load an external Groovy script
-                    def myScript = load 'myGroovyScript.groovy'
+                    def myScript = load 'greetings.groovy'
 
                     // Pass parameters to the script
                     myScript(name: 'Brendan', age: 22)
